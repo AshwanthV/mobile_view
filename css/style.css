@@ -1,0 +1,166 @@
+body {
+    background-color: beige;
+    color: #555555;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 25px;
+    line-height: 1.5;
+}
+
+
+.logo {
+    background: url("../images/Anubis-Logo.png");
+    background-size: contain;
+     height: 150px; 
+    background-repeat:no-repeat;
+    animation: moveBg 80s linear infinite;
+}
+
+@keyframes moveBg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo { 
+        animation: none; 
+        background-position: 100% 0;
+    }
+    .gif {
+        display: none;
+    }
+}
+
+.place , .pet, .recipe {
+    margin-bottom: 50px;
+    border: 4px dashed #000080;
+    border-radius: 15px;
+
+}
+
+.place div , .pet div , .recipe div {
+    margin-top: 15px;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #4169E1;
+    text-align: center;
+    margin: 25px;
+}
+
+h2,h3 {
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #4169E1;
+    padding: 10px 10px;
+}
+
+nav {
+    border: 2px solid #555555;
+    width: 100%;
+    border-radius: 25px;
+    margin: 25px 0px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+nav li {
+    padding: 4px 0px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #4169E1; 
+    color: #fff; 
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a.curr {
+    background-color: #4169E1;  
+    color: #fff; 
+    text-decoration: underline;
+}
+
+p , span {
+    line-height: 2;
+    margin-left: 25px;
+    padding: 5px 0px;
+}
+
+#skip {
+    position: absolute;
+    left: -500px;
+    text-transform: uppercase;
+}
+
+#skip:focus{
+    left:20px;
+    top: 50px;
+}
+
+.travel-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.travel-photos figure {
+    flex: 0 0 calc(50% - 20px); 
+    text-align: center; 
+    margin: 10px; 
+}
+
+.travel-photos img {
+    max-width: 100%;
+    height: auto;
+}
+
+.travel-photos figcaption {
+    margin-top: 10px; 
+}
+
+.recipe ul {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+.recipe ol {
+    list-style-type: decimal;
+    margin-left: 40px;
+}
+
+.recipe img {
+    display: block;
+    margin: 20px auto;
+}
+.pet ul {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+.pet img {
+    display: block;
+    margin: 0 auto;
+}
+.pet video {
+    display: block;
+    margin: 0 auto;
+}
